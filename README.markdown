@@ -1,4 +1,4 @@
-# Phân Tích - Trực Quan Hóa Dữ Liệu - Xây Dựng Dashboard Tình Trạng Nghỉ Việc Của Nhân Viên
+# PHÂN TÍCH - TRỰC QUAN HÓA DỮ LIỆU - XÂY DỰNG DASHBOARD TÌNH TRẠNG NGHỈ VIỆC CỦA NHÂN VIÊN
 
 ## Mô tả dự án
 Dự án này phân tích tập dữ liệu **Employee-turnover.csv** (1,470 dòng, 29 cột) từ Kaggle để xác định các yếu tố ảnh hưởng đến tỷ lệ nghỉ việc (Attrition) của nhân viên. Dự án bao gồm các bước tiền xử lý dữ liệu bằng Python, trực quan hóa và xây dựng dashboard trên Power BI để hỗ trợ ra quyết định trong quản lý nhân sự.
@@ -9,7 +9,7 @@ Dự án này phân tích tập dữ liệu **Employee-turnover.csv** (1,470 dò
 - Kết quả: **Mức độ cân bằng công việc - cuộc sống (Work Life Balance = Low)** là yếu tố chính với tỷ lệ nghỉ việc 66.67%.
 
 ### Dữ liệu
-- **Nguồn**: [Employee-turnover.csv trên Kaggle](https://www.kaggle.com/datasets) (giả định).
+- **Nguồn**: [Employee-turnover.csv trên Kaggle](https://www.kaggle.com/datasets).
 - **Quy mô**: 1,470 dòng, 29 cột (bao gồm Age, Job Involvement, Work Life Balance, Monthly Income, Attrition, v.v.).
 
 ## Công nghệ sử dụng
@@ -27,8 +27,8 @@ Sử dụng Python (Pandas, NumPy) để làm sạch và chuẩn hóa dữ liệ
   - Chuẩn hóa định dạng cột (ví dụ: Monthly Income thành số, Attrition thành Yes/No).
 - **Tạo cột mới**:
   - `Attrition Binary`: 1 (Yes), 2 (No).
-  - `Income Category`: Low (<$3000), Medium ($3000-$6000), High (>$6000).
-  - `Age Group`: <30, 30-40, >40.
+  - `Income Category`: Low (<$3000), Medium ($3000-$7000), High (>$7000).
+  - `Age Group`:  Under 30, 30-40,  Over 40.
 - **Mã Python mẫu**:
   ```python
   import pandas as pd
@@ -41,7 +41,7 @@ Sử dụng Python (Pandas, NumPy) để làm sạch và chuẩn hóa dữ liệ
   df['Attrition Binary'] = df['Attrition'].map({'Yes': 1, 'No': 2})
 
   # Tạo cột Income Category
-  bins = [0, 3000, 6000, float('inf')]
+  bins = [0, 3000, 7000, float('inf')]
   labels = ['Low', 'Medium', 'High']
   df['Income Category'] = pd.cut(df['Monthly Income'], bins=bins, labels=labels)
 
@@ -65,15 +65,28 @@ Sử dụng Python (Pandas, NumPy) để làm sạch và chuẩn hóa dữ liệ
     ) * 100
     ```
 - **Các biểu đồ**:
-  - **Stacked Bar Chart**: So sánh tỷ lệ nghỉ việc theo Work Life Balance (Low: 66.67%).
-  - **Pie Chart**: Phân bố Attrition theo Income Category.
-  - **Treemap**: Tỷ lệ nghỉ việc theo Department và Job Role.
-  - **Funnel Chart**: Các giai đoạn thăng tiến (Years Since Last Promotion) và Attrition.
+  - **Stacked Bar Chart**
+  - **Stacked Column Chart**
+  - **Clustered Bar Chart**
+  - **Clustered Column Chart**
+  - **Line Chart**
+  - **Area Chart**
+  - **Line and Stacked Column Chart**
+  - **Line and Clustered Column Chart**
+  - **Ribbon Chart**
+  - **Scatter Chart**
+  - **Donut Chart**
+  - **Gauge**
+  - **Pie Chart**
+  - **Treemap**
+  - **Funnel Chart**
 - **Dashboard**:
-  - Trang 1: Tổng quan tỷ lệ nghỉ việc (Card Visual, Stacked Bar).
-  - Trang 2: Phân tích chi tiết theo yếu tố (Pie, Treemap).
-  - Trang 3: Xu hướng (Funnel, Line Chart).
-  - Bộ lọc động (Slicer): Lọc theo Age Group, Department.
+  - Trang 1: Phân tích chi tiết theo yếu tố.
+  - Trang 2: Phân tích chi tiết theo yếu tố.
+  - Trang 3: Phân tích chi tiết theo yếu tố.
+  - Trang 4: Tỷ lệ nghỉ việc theo các yếu tố.
+  - Trang 5: Tỷ lệ nghỉ việc theo các yếu tố
+  - Bộ lọc động (Slicer): Lọc theo Age Group, Department, ...
 
 ### 3. Kết quả
 - **Yếu tố chính**: Mức độ cân bằng công việc - cuộc sống (Work Life Balance = Low) có tỷ lệ nghỉ việc cao nhất: **66.67%**.
@@ -86,9 +99,9 @@ Sử dụng Python (Pandas, NumPy) để làm sạch và chuẩn hóa dữ liệ
 
 ## Hình ảnh minh họa
 - **Biểu đồ Stacked Bar (Work Life Balance)**:
-  ![Stacked Bar Chart](images/stacked-bar-worklifebalance.png) *(Giả định)*
+  ![Stacked Bar Chart](images/stacked-bar-worklifebalance.png) 
 - **Dashboard Tổng quan**:
-  ![Dashboard](images/dashboard-overview.png) *(Giả định)*
+  ![Dashboard](images/dashboard-overview.png) 
 
 ## Cách chạy dự án
 1. **Tiền xử lý dữ liệu**:
