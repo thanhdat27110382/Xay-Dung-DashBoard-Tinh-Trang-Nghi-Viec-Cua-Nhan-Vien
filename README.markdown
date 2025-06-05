@@ -98,28 +98,34 @@ Sử dụng Python (Pandas, NumPy) để làm sạch và chuẩn hóa dữ liệ
   - Tăng lương cho nhóm Income Category = Low.
 
 ## Hình ảnh minh họa
-- **Biểu đồ Stacked Bar (Work Life Balance)**:
-  ![Stacked Bar Chart](images/stacked-bar-worklifebalance.png) 
-- **Dashboard Tổng quan**:
-  ![Dashboard](images/dashboard-overview.png) 
+- **DashBoard 1**:
+  ![DashBoard 1](images/dash1.png) 
+- **Dashboard 2**:
+  ![Dashboard 2](images/dash2.png)
+- **Dashboard 3**:
+  ![Dashboard 3](images/dash3.png)
+- **Dashboard 4**:
+  ![Dashboard 4](images/dash4.png)
+- **Dashboard 5**:
+  ![Dashboard 5](images/dash5.png) 
 
 ## Cách chạy dự án
 1. **Tiền xử lý dữ liệu**:
    - Cài đặt Python và các thư viện: `pip install pandas numpy`.
-   - Chạy file `preprocess.ipynb` trong Jupyter Notebook để xử lý dữ liệu.
+   - Chạy file `Employee Attrition.ipynb` trong Jupyter Notebook để xử lý dữ liệu.
 2. **Trực quan hóa**:
    - Tải file `.pbix` (Power BI) và mở bằng Power BI Desktop.
    - Cập nhật đường dẫn dữ liệu nếu cần.
 3. **Xem trên GitHub**:
-   - File Python: `/code/preprocess.ipynb`.
-   - File Power BI: `/powerbi/employee-turnover-dashboard.pbix`.
+   - File Python: `/Employee Attrition.ipynb`.
+   - File Power BI: `/BaiTestDataVisualization25.02.2025.pbix`.
 
 ## Kết luận
 Dự án này cung cấp cái nhìn sâu sắc về tình trạng nghỉ việc của nhân viên, với dashboard trực quan hỗ trợ quản lý nhân sự đưa ra quyết định hiệu quả. Work Life Balance là yếu tố cần ưu tiên cải thiện để giảm tỷ lệ nghỉ việc.
 
 ## Tác giả
-- **Tên**: [Tên của bạn]
-- **Liên hệ**: [Email của bạn]
+- **Tên**: Trần Lương Thành Đạt
+- **Liên hệ**: tranluongthanhdat27112003@gmail.com
 - **Ngày hoàn thành**: 05/06/2025
 
 ## Tài liệu tham khảo
